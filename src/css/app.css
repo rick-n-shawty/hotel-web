@@ -97,6 +97,25 @@ hr {
   }
 }
 
+/*hero*/
+.titleherolg {
+  display: block;
+}
+
+.titleherosm {
+  display: none;
+}
+
+@media screen and (max-width: 425px) {
+  .titleherolg {
+    display: none;
+  }
+
+  .titleherosm {
+    display: block;
+  }
+}
+
 /*about*/
 #about {
   margin-top: -50px;

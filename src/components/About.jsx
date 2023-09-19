@@ -183,21 +183,36 @@ const About = () => {
                 src="https://images.unsplash.com/photo-1694032073070-c54e65e77bbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="img"
               />
-              <p>Dublin, 2023 - for Helsinki Heritage Preservation Society</p>
+              <p>
+                Dublin, 2023 -{" "}
+                <span style={{ fontWeight: "100" }}>
+                  for Helsinki Heritage Preservation Society
+                </span>
+              </p>
             </div>
             <div className="imagecontainer">
               <img
                 src="https://images.unsplash.com/photo-1642034410877-22875908ddda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1888&q=80"
                 alt="img"
               />
-              <p>Detroit, 2022 - for Oslo Modern Art Museum</p>
+              <p>
+                Detroit, 2022 -{" "}
+                <span style={{ fontWeight: "100" }}>
+                  for Oslo Modern Art Museum
+                </span>
+              </p>
             </div>
             <div className="imagecontainer">
               <img
                 src="https://images.unsplash.com/photo-1693362287391-fc96c0e5e489?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
                 alt="img"
               />
-              <p>Oslo, 2022 - Nordic Brutalist Enthusiast Club</p>
+              <p>
+                Oslo, 2022 -{" "}
+                <span style={{ fontWeight: "100" }}>
+                  Nordic Brutalist Enthusiast Club
+                </span>
+              </p>
             </div>
           </div>
         </div>

@@ -23,11 +23,25 @@ const Model = () => {
       >
         <div className="w-100 position-relative">
           <motion.h1
+            className="titleherolg"
             initial={{ opacity: 0, position: "absolute", top: "0", zIndex: 0 }}
             animate={{
               opacity: 1,
               position: "absolute",
-              top: "-50px",
+              top: "-60px",
+              transition: { delay: 1.4, ...transition },
+              zIndex: 0,
+            }}
+          >
+            Sven Andersson Photography
+          </motion.h1>
+          <motion.h1
+            className="titleherosm"
+            initial={{ opacity: 0, position: "absolute", top: "0", zIndex: 0 }}
+            animate={{
+              opacity: 1,
+              position: "absolute",
+              top: "-80px",
               transition: { delay: 1.4, ...transition },
               zIndex: 0,
             }}
