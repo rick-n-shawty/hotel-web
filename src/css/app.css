@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,800;0,9..40,1000;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Kumbh+Sans:wght@400;700&family=Lato:wght@100;300;400;700;900&family=League+Spartan:wght@500;600;700&family=Manrope:wght@800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@100;300;400;500;700;900&family=Overpass:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,800&family=Raleway:wght@100;200;300;500;600;700;800&family=Roboto:wght@400;700&family=Rubik:wght@400;500;700&family=Ubuntu:wght@400;500;700&family=Work+Sans:wght@100;200;300;400;500;700;800&display=swap");
+/*
+font-family: 'Bebas Neue', sans-serif;
+font-family: 'DM Sans', sans-serif;
+font-family: 'Hanken Grotesk', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Kumbh Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'League Spartan', sans-serif;
+font-family: 'Manrope', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Overpass', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Work Sans', sans-serif;
+*/
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*toggler*/
+.navbar-toggler,
+.btn {
+  border: none !important;
+}
+
+.navbar-toggler:focus,
+.btn:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler:active,
+.btn:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+body {
+  background-color: rgb(5, 5, 5) !important;
+  color: rgb(255, 255, 255) !important;
+  font-family: "work sans", sans-serif !important;
+  padding: 20px;
+  cursor: url("/cursor.png"), cell !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+a {
+  color: white !important;
+  margin-bottom: 16px;
+}
+
+a:hover {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+img {
+  object-fit: cover;
+}
+
+hr {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/*nav*/
+.offcanvas {
+  background-color: rgb(5, 5, 5) !important;
+  color: white !important;
+  height: max-content !important;
+}
+
+.offcanvas-body {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 991px) {
+  .offcanvas-body {
+    margin-left: 0;
+  }
+}
+
+/*about*/
+#about {
+  margin-top: -50px;
+}
+
+.clients {
+  margin-top: 100px;
+}
+
+.clientinfo {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  margin: 20px 0px !important;
+}
+
+.clientinfo > .col-md-8 {
+  font-weight: 100;
+  padding: 0;
+}
+
+.clientinfo > .col-md-4 {
+  padding: 0;
+}
+
+.reviews {
+  margin-top: 100px;
+}
+
+.reviewsoutercontainer {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.reviewsinnercontainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.reviewsinnercontainer > p {
+  margin-right: 50px;
+  white-space: nowrap;
+}
+
+.latestwork {
+  margin-top: 100px;
+}
+
+.latestworkgallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.imagecontainer {
+  flex-grow: 1;
+  flex-basis: 400px;
+  overflow: hidden;
+}
+
+.imagecontainer > img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.imagecontainer > p {
+  font-weight: 100;
+}
+
+/*gallery*/
+.gallery {
+  margin-top: 100px;
+}
+
+.gallerycontainer {
+  display: block;
+  margin-top: 100px;
+}
+
+.imageleft {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+
+.imageright {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.imagegallery {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.imageleft > img,
+.imageright > img,
+.imagegallery > img {
+  width: 500px;
+  height: auto;
+}
+
+.form {
+  margin-top: 100px;
+}
+
+input,
+textarea {
+  background-color: rgb(5, 5, 5) !important;
+}
+
+/*footer*/
+.footer {
+  margin-top: 100px;
+}
+
+.footerdesc {
+  position: absolute;
+  bottom: 0;
+  right: 20;
+}
+
+.footerend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 991px) {
+  .nav-link {
+    padding: 0 !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footerdesc {
+    position: relative;
+  }
+
+  .footerend {
+    display: block;
+  }
+
+  .social {
+    display: flex;
+    gap: 20px;
+  }
+
+  .imageleft,
+  .imageright {
+    display: block;
+  }
+
+  .imageleft > img,
+  .imageright > img {
+    width: 100%;
+    height: auto;
+  }
+}
