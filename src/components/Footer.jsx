@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="footerend">
         <p>Some copiright statement - 2023</p>
         <p>Sven Andersson</p>
-        <a className="nav-link">steveandersson@gmail.com</a>
+        <a className="nav-link">svenandersson@gmail.com</a>
       </div>
     </footer>
   );

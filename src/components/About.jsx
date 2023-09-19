@@ -1,5 +1,6 @@
 import { cubicBezier, motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Signature from "./Signature";
 
 const clients = [
   {
@@ -136,6 +137,8 @@ const About = () => {
           </div>
         </div>
       </MotionArticle>
+
+      <Signature />
 
       <MotionArticle>
         <div className="clients">

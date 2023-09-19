@@ -59,16 +59,16 @@ const containervariants = {
 
 const Gallery = () => {
   return (
-    <section className="gallery">
-      <motion.div
-        variants={containervariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="row"
-      >
+    <motion.section
+      variants={containervariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="gallery"
+    >
+      <article className="row">
         <h1>GALLERY</h1>
-        <div className="col-md-6">
+        <div className="col-md-6 gallerydesc">
           <p>
             Welcome to Sven Andersson's gallery, where artistry meets the Nordic
             spirit. Immerse yourself in a world of captivating landscapes, rich
@@ -77,7 +77,7 @@ const Gallery = () => {
             that unveils the beauty of the Nordic region.
           </p>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 gallerydesc">
           <p>
             With each click of his camera, he captures the soul of the North,
             transforming everyday scenes into extraordinary moments. Explore our
@@ -85,22 +85,25 @@ const Gallery = () => {
             design, and the Nordic way of life.
           </p>
         </div>
-      </motion.div>
+      </article>
       <article className="gallerycontainer">
         {images.map((image, index) => (
           <motion.div
-            variants={containervariants}
-            initial="hidden"
-            whileInView="visible"
+            initial={{ filter: "blur(2em)", y: 20 }}
+            whileInView={{
+              filter: "blur(0em)",
+              y: 0,
+              transition: { delay: index * 0.05, duration: 0.5 },
+            }}
             viewport={{ once: true }}
-            key={image.title}
+            key={index}
             className={index % 2 === 0 ? "imageright" : "imageleft"}
           >
             <img src={image.url} alt={image.title} />
           </motion.div>
         ))}
       </article>
-    </section>
+    </motion.section>
   );
 };
 

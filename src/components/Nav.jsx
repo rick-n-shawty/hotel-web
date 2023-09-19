@@ -33,11 +33,11 @@ const Nav = () => {
               </h5>
               <button
                 type="button"
-                className="btn text-white p-0"
+                className="btn p-0 text-white"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               >
-                <i className="bi bi-x h1" />
+                close
               </button>
             </div>
             <RouterLink
