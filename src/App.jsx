@@ -1,11 +1,11 @@
 import "./css/app.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { Fragment, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { Fragment } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-import { AnimatePresence } from "framer-motion";
 import Model from "./components/Model";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
