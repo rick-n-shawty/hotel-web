@@ -6,7 +6,7 @@
   "homepage": "https://maelacudini.github.io/Photography",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/photography/",
+    "build": "vite build --base=/Photography/",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
