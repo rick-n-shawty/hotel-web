@@ -12,20 +12,15 @@ import Gallery from "./components/Gallery";
 
 const App = () => {
   const location = useLocation();
-  const [theme, setTheme] = useState(null);
-
-  const handlethemeswitcher = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
 
   return (
     <Fragment>
-      <Nav handlethemeswitcher={handlethemeswitcher} />
+      <Nav />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.key}>
           <Route exact path="/" element={<Hero />} />
-          <Route path="/model" element={<Model />} />
-          <Route path="/gallery" element={<Gallery />} />
+          <Route exact path="/model" element={<Model />} />
+          <Route exact path="/gallery" element={<Gallery />} />
         </Routes>
       </AnimatePresence>
       <Footer />
