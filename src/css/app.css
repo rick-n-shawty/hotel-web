@@ -196,12 +196,12 @@ hr {
 /*gallery*/
 .gallery {
   margin-top: 100px;
+  overflow: scroll;
 }
 
 .containergallery {
   display: flex;
   gap: 20px;
-  overflow: scroll;
 }
 
 .imagegallery {
