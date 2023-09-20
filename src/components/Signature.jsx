@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Fragment } from "react";
 
 const draw = {
   hidden: { pathLength: 0, opacity: 0 },
@@ -32,6 +31,7 @@ const Signature = () => {
           style={{ strokeWidth: 10 }}
           stroke-linecap="round"
           variants={draw}
+          fill="none"
         />
       </motion.svg>
     </section>

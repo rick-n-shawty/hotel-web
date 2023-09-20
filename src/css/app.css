@@ -50,8 +50,6 @@ body {
   color: rgb(255, 255, 255) !important;
   font-family: "Montserrat", sans-serif !important;
   padding: 20px;
-  cursor: url("https://static.vecteezy.com/system/resources/previews/011/720/952/non_2x/simple-hand-cursor-free-png.png"),
-    auto;
 }
 
 h1,
@@ -62,6 +60,10 @@ h5,
 h6 {
   font-family: "DM Sans", sans-serif;
   font-weight: 600;
+}
+
+p {
+  font-weight: 300;
 }
 
 a {
@@ -76,6 +78,7 @@ a:hover {
 
 img {
   object-fit: cover;
+  object-position: center;
 }
 
 hr {
@@ -93,9 +96,30 @@ hr {
   margin-left: auto;
 }
 
+.imageoffcanvas {
+  display: none;
+}
+
 @media screen and (max-width: 991px) {
+  .nav-link {
+    padding: 0 !important;
+  }
+
+  .imageoffcanvas {
+    display: block;
+    width: 100%;
+    min-height: auto;
+    object-fit: cover;
+    object-position: top;
+  }
+
   .offcanvas-body {
     margin-left: 0;
+  }
+
+  .offcanvas-header {
+    display: flex;
+    align-items: baseline !important;
   }
 }
 
@@ -147,7 +171,7 @@ hr {
 }
 
 .clientinfo > .col-md-4 {
-  padding: 0;
+  padding: 0px 10px 0px 0px;
 }
 
 .reviews {
@@ -195,13 +219,13 @@ hr {
 
 /*gallery*/
 .gallery {
-  margin-top: 100px;
   overflow: scroll;
 }
 
 .containergallery {
   display: flex;
   gap: 20px;
+  margin-top: 20px;
 }
 
 .imagegallery {
@@ -228,19 +252,12 @@ textarea {
   position: absolute;
   bottom: 0;
   right: 20;
-  font-weight: 100;
 }
 
 .footerend {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-@media screen and (max-width: 991px) {
-  .nav-link {
-    padding: 0 !important;
-  }
 }
 
 @media screen and (max-width: 767px) {

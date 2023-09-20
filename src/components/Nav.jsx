@@ -21,7 +21,7 @@ const Nav = () => {
           menu
         </button>
         <div
-          className="offcanvas offcanvas-top"
+          className="offcanvas offcanvas-bottom"
           tabIndex="-1"
           id="offcanvasTop"
           aria-labelledby="offcanvasTopLabel"
@@ -56,6 +56,11 @@ const Nav = () => {
             <ScrollLink className="nav-link" aria-current="page" to="footer">
               Contact
             </ScrollLink>
+            <img
+              src="https://images.unsplash.com/photo-1691197617440-ed5b47267b26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+              alt="img"
+              className="imageoffcanvas"
+            />
           </div>
         </div>
       </div>
