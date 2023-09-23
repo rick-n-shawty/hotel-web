@@ -9,6 +9,7 @@ import Hero from "./components/Hero";
 import Model from "./components/Model";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
+import HorizontalSwiper from "./components/HorizontalSwiper";
 
 const App = () => {
   const location = useLocation();
@@ -20,6 +21,11 @@ const App = () => {
         <Routes location={location} key={location.key}>
           <Route exact path="/" element={<Hero />} />
           <Route exact path="/model" element={<Model />} />
+          <Route
+            exact
+            path="/horizontalswiper"
+            element={<HorizontalSwiper />}
+          />
           <Route exact path="/gallery" element={<Gallery />} />
         </Routes>
       </AnimatePresence>

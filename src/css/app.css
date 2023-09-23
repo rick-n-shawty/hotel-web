@@ -87,7 +87,8 @@ hr {
 
 /*nav*/
 .offcanvas {
-  background-color: rgb(5, 5, 5) !important;
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(1em);
   color: white !important;
   height: max-content !important;
 }
@@ -215,6 +216,23 @@ hr {
   height: 500px;
   object-fit: cover;
   margin-bottom: 20px;
+}
+
+/*swiper*/
+.imageswiper {
+  max-width: 500px;
+  height: 100%;
+}
+
+.swiper-slide,
+.swiper-wrapper {
+  width: fit-content !important;
+}
+
+.vertical-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 50px;
 }
 
 /*gallery*/

@@ -50,7 +50,11 @@ const Nav = () => {
             <ScrollLink className="nav-link" aria-current="page" to="about">
               About
             </ScrollLink>
-            <RouterLink className="nav-link" aria-current="page" to="/gallery">
+            <RouterLink
+              className="nav-link"
+              aria-current="page"
+              to="/horizontalswiper"
+            >
               Gallery
             </RouterLink>
             <ScrollLink className="nav-link" aria-current="page" to="footer">
