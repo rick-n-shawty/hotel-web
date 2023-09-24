@@ -236,8 +236,8 @@ hr {
 
 /*swiper*/
 .imageswiper {
-  max-width: 500px;
-  height: 100%;
+  max-width: 300px;
+  max-height: 500px;
 }
 
 .swiper-slide,
