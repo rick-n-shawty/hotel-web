@@ -89,15 +89,17 @@ hr {
 .offcanvas {
   background-color: rgba(0, 0, 0, 0.2) !important;
   backdrop-filter: blur(1em);
+  -webkit-backdrop-filter: blur(1em);
   color: white !important;
-  height: max-content !important;
+  height: 100% !important;
+  width: 90% !important;
 }
 
 .offcanvas-body {
   margin-left: auto;
 }
 
-.imageoffcanvas {
+.offdesc {
   display: none;
 }
 
@@ -106,21 +108,35 @@ hr {
     padding: 0 !important;
   }
 
-  .imageoffcanvas {
-    display: block;
-    width: 100%;
-    min-height: auto;
-    object-fit: cover;
-    object-position: top;
+  .offcanvas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(1em);
+    -webkit-backdrop-filter: blur(1em);
+    background-color: rgba(0, 0, 0, 0.2) !important;
   }
 
   .offcanvas-body {
     margin-left: 0;
+    position: relative;
   }
 
   .offcanvas-header {
     display: flex;
     align-items: baseline !important;
+  }
+
+  .offdesc {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    margin: 0px !important;
   }
 }
 
@@ -232,7 +248,11 @@ hr {
 .vertical-scroll-container {
   width: 100%;
   overflow: hidden;
-  margin-top: 50px;
+  touch-action: pan-y;
+}
+
+.swiper-container {
+  touch-action: pan-y;
 }
 
 /*gallery*/

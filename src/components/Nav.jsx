@@ -21,7 +21,7 @@ const Nav = () => {
           menu
         </button>
         <div
-          className="offcanvas offcanvas-bottom"
+          className="offcanvas offcanvas-start"
           tabIndex="-1"
           id="offcanvasTop"
           aria-labelledby="offcanvasTopLabel"
@@ -29,7 +29,7 @@ const Nav = () => {
           <div className="navbar-nav offcanvas-body">
             <div className="offcanvas-header p-0 mb-3">
               <h5 className="offcanvas-title" id="offcanvasTopLabel">
-                Sven Andersson Photography
+                Sven Andersson
               </h5>
               <button
                 type="button"
@@ -60,11 +60,12 @@ const Nav = () => {
             <ScrollLink className="nav-link" aria-current="page" to="footer">
               Contact
             </ScrollLink>
-            <img
-              src="https://images.unsplash.com/photo-1691197617440-ed5b47267b26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
-              alt="img"
-              className="imageoffcanvas"
-            />
+            <p className="offdesc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium rem aspernatur quis deserunt culpa voluptates et
+              commodi minus fuga ex cumque, placeat sed, eaque quia non
+              molestias neque maxime quod.
+            </p>
           </div>
         </div>
       </div>
