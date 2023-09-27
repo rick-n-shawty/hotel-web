@@ -1,6 +1,7 @@
-import { cubicBezier, motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import Signature from "./Signature";
+import SlidingText from "./SlidingText";
+import style from "../css/about.module.css";
 
 const clients = [
   {
@@ -105,20 +106,12 @@ const MotionArticle = ({ title, children }) => {
 };
 
 const About = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-  });
-  const scroll = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"], {
-    ease: cubicBezier(0.05, 0.6, 0.05, 0.6),
-  });
-
   return (
     <section id="about">
       <MotionArticle>
         <h1>About</h1>
-        <div className="row about">
-          <div className="col-md-6">
+        <div className={` row ${style.about}`}>
+          <div className={`col-md-6 ${style.colabout}`}>
             <p>
               Sven Andersson Photography is a name synonymous with the art of
               capturing the Nordic essence through the lens of a camera. Rooted
@@ -127,7 +120,7 @@ const About = () => {
               beauty of the North.
             </p>
           </div>
-          <div className="col-md-6">
+          <div className={`col-md-6 ${style.colabout}`}>
             <p>
               Beyond landscapes, Sven's lens also captures the essence of Nordic
               life. From the simplicity of Swedish design to the warmth of
@@ -141,14 +134,16 @@ const About = () => {
       <Signature />
 
       <MotionArticle>
-        <div className="clients">
+        <div className={style.clients}>
           <h1>Clients</h1>
           {clients.map((client, index) => (
-            <div className="row clientinfo" key={index}>
-              <div className="col-md-4">
+            <div className={`row ${style.clientinfo}`} key={index}>
+              <div className="col-md-4 p-0">
                 <span>{client.name}</span>
               </div>
-              <div className="col-md-8 d-flex justify-content-between">
+              <div
+                className={`col-md-8 d-flex justify-content-between ${style.light}`}
+              >
                 <span>{client.jobRole}</span>
                 <span>{client.year}</span>
               </div>
@@ -157,42 +152,28 @@ const About = () => {
         </div>
       </MotionArticle>
 
-      <MotionArticle>
-        <div className="reviews">
-          <h1>Reviews</h1>
-          <div ref={ref} className="reviewsoutercontainer">
-            <motion.div style={{ x: scroll }} className="reviewsinnercontainer">
-              {reviews.map((review, index) => (
-                <p key={index}>
-                  <i>{review.title}</i>
-                  <span> - {review.author}</span>
-                </p>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </MotionArticle>
+      <SlidingText />
 
       <MotionArticle>
-        <div className="latestwork">
+        <div className={style.latestwork}>
           <h1>Latest work</h1>
           <p>Have a look at my latest projects.</p>
-          <div className="latestworkgallery">
-            <div className="imagecontainer">
+          <div className={style.latestworkgallery}>
+            <div className={style.imagecontainer}>
               <img
                 src="https://images.unsplash.com/photo-1694032073070-c54e65e77bbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                 alt="img"
               />
               <p>Dublin, 2023 - for Helsinki Heritage Preservation Society</p>
             </div>
-            <div className="imagecontainer">
+            <div className={style.imagecontainer}>
               <img
-                src="https://images.unsplash.com/photo-1642034410877-22875908ddda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80"
+                src="https://images.unsplash.com/photo-1642034410877-22875908ddda?ixlib=rb-4.0.3&ixid=M3xMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80"
                 alt="img"
               />
               <p>Detroit, 2022 - for Oslo Modern Art Museum</p>
             </div>
-            <div className="imagecontainer">
+            <div className={style.imagecontainer}>
               <img
                 src="https://images.unsplash.com/photo-1693362287391-fc96c0e5e489?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
                 alt="img"

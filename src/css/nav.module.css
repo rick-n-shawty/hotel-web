@@ -1,0 +1,59 @@
+/*nav*/
+.offcanvas {
+  background-color: rgba(0, 0, 0) !important;
+  backdrop-filter: blur(0.5em);
+  -webkit-backdrop-filter: blur(0.5em);
+  color: white !important;
+  height: 100% !important;
+  width: 90% !important;
+}
+
+.offcanvasBody {
+  margin-left: auto;
+  padding: 20px;
+}
+
+.offdesc {
+  display: none;
+}
+
+.offdesc > h3 {
+  font-size: 20px !important;
+}
+
+@media screen and (max-width: 991px) {
+  .navlink {
+    padding: 0 !important;
+    font-size: 50px;
+  }
+
+  .offcanvas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(0.5em);
+    -webkit-backdrop-filter: blur(0.5em);
+  }
+
+  .offcanvasBody {
+    margin-left: 0;
+    position: relative;
+  }
+
+  .offcanvasHeader {
+    display: flex;
+    align-items: baseline !important;
+  }
+
+  .offdesc {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    margin: 0px !important;
+  }
+}

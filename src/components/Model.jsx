@@ -1,5 +1,6 @@
 import { motion, cubicBezier } from "framer-motion";
 import About from "./About";
+import style from "../css/model.module.css";
 
 const customEasing = cubicBezier(0.6, 0.01, -0.05, 0.9);
 const transition = { duration: 1.4, ease: customEasing };
@@ -23,7 +24,7 @@ const Model = () => {
       >
         <div className="w-100 position-relative">
           <motion.h1
-            className="titleherolg"
+            className={style.titleherolg}
             initial={{ opacity: 0, position: "absolute", top: "0", zIndex: 0 }}
             animate={{
               opacity: 1,
@@ -36,7 +37,7 @@ const Model = () => {
             Sven Andersson Photography
           </motion.h1>
           <motion.h1
-            className="titleherosm"
+            className={style.titleherosm}
             initial={{ opacity: 0, position: "absolute", top: "0", zIndex: 0 }}
             animate={{
               opacity: 1,

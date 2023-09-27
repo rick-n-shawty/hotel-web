@@ -1,0 +1,32 @@
+/*footer*/
+.footer {
+  margin-top: 100px;
+}
+
+.footerdesc {
+  position: absolute;
+  bottom: 0;
+  right: 20;
+  font-weight: 100;
+}
+
+.footerend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .footerdesc {
+    position: relative;
+  }
+
+  .footerend {
+    display: block;
+  }
+
+  .social {
+    display: flex;
+    gap: 20px;
+  }
+}

@@ -14,6 +14,12 @@ const Hero = () => {
           <motion.img
             src="https://images.unsplash.com/photo-1668502741331-09e1c8917496?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2022&q=80"
             alt="heroimg"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.5 },
+            }}
             whileHover={{ scale: 1.1 }}
             exit={{ scale: 1 }}
             transition={transition}
@@ -23,6 +29,12 @@ const Hero = () => {
         </div>
         <motion.div
           key="hero-content"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.5, delay: 0.2 },
+          }}
           exit={{ opacity: 0 }}
           transition={transition}
           className="nav-link d-flex justify-content-between align-items-center"

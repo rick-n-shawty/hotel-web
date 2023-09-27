@@ -1,0 +1,27 @@
+.main {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.slider {
+  position: relative;
+  white-space: nowrap;
+}
+
+.pcont {
+  display: flex;
+}
+
+.slider h1 {
+  position: relative;
+  margin: 0px;
+  padding-right: 50px;
+}
+
+.slider div:nth-of-type(2) {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}

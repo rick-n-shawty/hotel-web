@@ -1,0 +1,57 @@
+/*about*/
+#about {
+  margin-top: -50px;
+}
+
+.about > .colabout {
+  font-weight: 100;
+}
+
+.about {
+  margin-bottom: 100px;
+}
+
+/*clients*/
+.clients {
+  margin-top: 100px;
+}
+
+.clientinfo {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  margin: 20px 0px !important;
+}
+
+.light {
+  font-weight: 100 !important;
+  padding: 0;
+}
+
+.clientinfo > .col-md-4 {
+  padding: 0px 10px 0px 0px;
+}
+
+/*latest work*/
+.latestwork {
+  margin-top: 100px;
+}
+
+.latestworkgallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.imagecontainer {
+  flex-grow: 1;
+  flex-basis: 400px;
+  overflow: hidden;
+}
+
+.imagecontainer > img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}

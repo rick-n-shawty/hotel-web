@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import style from "../css/nav.module.css";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -21,16 +21,18 @@ const Nav = () => {
           menu
         </button>
         <div
-          className="offcanvas offcanvas-start"
+          className={`${style.offcanvas} offcanvas offcanvas-start`}
           tabIndex="-1"
           id="offcanvasTop"
           aria-labelledby="offcanvasTopLabel"
         >
-          <div className="navbar-nav offcanvas-body">
-            <div className="offcanvas-header p-0 mb-3">
-              <h5 className="offcanvas-title" id="offcanvasTopLabel">
+          <div className={`${style.offcanvasBody} navbar-nav offcanvas-body`}>
+            <div
+              className={`${style.offcanvasHeader} offcanvas-header p-0 mb-3`}
+            >
+              <p className="navbar-brand text-white" id="offcanvasTopLabel">
                 Sven Andersson
-              </h5>
+              </p>
               <button
                 type="button"
                 className="btn p-0 text-white"
@@ -41,31 +43,38 @@ const Nav = () => {
               </button>
             </div>
             <RouterLink
-              className="nav-link active"
+              className={`nav-link active ${style.navlink}`}
               aria-current="page"
               to="/model"
             >
               Home
             </RouterLink>
-            <ScrollLink className="nav-link" aria-current="page" to="about">
+            <ScrollLink
+              className={`nav-link ${style.navlink}`}
+              aria-current="page"
+              to="about"
+            >
               About
             </ScrollLink>
             <RouterLink
-              className="nav-link"
+              className={`nav-link ${style.navlink}`}
               aria-current="page"
               to="/horizontalswiper"
             >
               Gallery
             </RouterLink>
-            <ScrollLink className="nav-link" aria-current="page" to="footer">
+            <ScrollLink
+              className={`nav-link ${style.navlink}`}
+              aria-current="page"
+              to="footer"
+            >
               Contact
             </ScrollLink>
-            <p className="offdesc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium rem aspernatur quis deserunt culpa voluptates et
-              commodi minus fuga ex cumque, placeat sed, eaque quia non
-              molestias neque maxime quod.
-            </p>
+            <div className={style.offdesc}>
+              <a href="mailto: #" className="navbar-brand">
+                svenandersson@gmail.com
+              </a>
+            </div>
           </div>
         </div>
       </div>

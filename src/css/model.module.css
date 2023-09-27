@@ -1,0 +1,18 @@
+/*hero*/
+.titleherolg {
+  display: block;
+}
+
+.titleherosm {
+  display: none;
+}
+
+@media screen and (max-width: 422px) {
+  .titleherolg {
+    display: none;
+  }
+
+  .titleherosm {
+    display: block;
+  }
+}

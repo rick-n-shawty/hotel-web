@@ -1,14 +1,16 @@
+import style from "../css/footer.module.css";
+
 const Footer = () => {
   return (
-    <footer id="footer" className="footer">
+    <footer id="footer" className={style.footer}>
       <div className="row">
-        <div className="col-md-2 social">
-          <a className="nav-link">Instagram</a>
-          <a className="nav-link">LinkedIn</a>
-          <a className="nav-link">Facebook</a>
+        <div className={`col-md-2 ${style.social}`}>
+          <a className={`nav-link ${style.navlink}`}>Instagram</a>
+          <a className={`nav-link ${style.navlink}`}>LinkedIn</a>
+          <a className={`nav-link ${style.navlink}`}>Facebook</a>
         </div>
         <div className="col-md-10 position-relative">
-          <p className="footerdesc">
+          <p className={style.footerdesc}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ea
             saepe at dolores? Id at, culpa qui facere nisi tempore. Provident
             magni praesentium voluptatem est ipsa ea officiis quas voluptatibus?
@@ -16,10 +18,10 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <div className="footerend">
+      <div className={style.footerend}>
         <p>Some copiright statement - 2023</p>
         <p>Sven Andersson</p>
-        <a className="nav-link">svenandersson@gmail.com</a>
+        <a className={`nav-link ${style.navlink}`}>svenandersson@gmail.com</a>
       </div>
     </footer>
   );

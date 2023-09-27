@@ -8,7 +8,6 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Model from "./components/Model";
 import Footer from "./components/Footer";
-import Gallery from "./components/Gallery";
 import HorizontalSwiper from "./components/HorizontalSwiper";
 
 const App = () => {
@@ -26,7 +25,6 @@ const App = () => {
             path="/horizontalswiper"
             element={<HorizontalSwiper />}
           />
-          <Route exact path="/gallery" element={<Gallery />} />
         </Routes>
       </AnimatePresence>
       <Footer />

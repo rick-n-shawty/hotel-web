@@ -96,7 +96,7 @@ const HorizontalSwiper = () => {
                 alt={image.title}
                 className="imageswiper"
               />
-              <p>{image.date}</p>
+              <p style={{ marginTop: "16px" }}>{image.date}</p>
             </div>
           ))}
         </div>
