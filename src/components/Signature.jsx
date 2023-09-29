@@ -17,9 +17,9 @@ const draw = {
 
 const Signature = () => {
   return (
-    <section className="signature">
+    <section className="signature d-flex justify-content-center">
       <motion.svg
-        width="100%"
+        width="350px"
         height="200"
         viewBox="0 0 1703 546"
         initial="hidden"

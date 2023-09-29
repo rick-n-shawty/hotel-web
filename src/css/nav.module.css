@@ -1,6 +1,6 @@
 /*nav*/
 .offcanvas {
-  background-color: rgba(0, 0, 0) !important;
+  background-color: rgb(15, 15, 15) !important;
   backdrop-filter: blur(0.5em);
   -webkit-backdrop-filter: blur(0.5em);
   color: white !important;

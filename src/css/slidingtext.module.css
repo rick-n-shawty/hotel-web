@@ -14,10 +14,11 @@
   display: flex;
 }
 
-.slider h1 {
+.slider h2 {
   position: relative;
   margin: 0px;
   padding-right: 50px;
+  font-weight: normal !important;
 }
 
 .slider div:nth-of-type(2) {

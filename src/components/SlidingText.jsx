@@ -43,32 +43,32 @@ const SlidingText = () => {
         <h1>Reviews</h1>
         <div ref={slider} className={style.slider}>
           <div ref={firstText} className={style.pcont}>
-            <h1>
+            <h2>
               <i>Great job!</i> - Event organizer
-            </h1>
-            <h1>
+            </h2>
+            <h2>
               <i>I'm impressed.</i> - Interior design studio
-            </h1>
-            <h1>
+            </h2>
+            <h2>
               <i>I enjoyed every part of the project.</i> - Art museum
-            </h1>
-            <h1>
+            </h2>
+            <h2>
               <i>Best photographer ever.</i> - Architectural designer
-            </h1>
+            </h2>
           </div>
           <div ref={secondText} className={style.pcont}>
-            <h1>
+            <h2>
               <i>Great job!</i> - Event organizer
-            </h1>
-            <h1>
+            </h2>
+            <h2>
               <i>I'm impressed.</i> - Interior design studio
-            </h1>
-            <h1>
+            </h2>
+            <h2>
               <i>I enjoyed every part of the project.</i> - Art museum
-            </h1>
-            <h1>
+            </h2>
+            <h2>
               <i>Best photographer ever.</i> - Architectural designer
-            </h1>
+            </h2>
           </div>
         </div>
       </div>

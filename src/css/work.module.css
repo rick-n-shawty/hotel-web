@@ -1,0 +1,31 @@
+/*latest work*/
+.latestwork {
+  margin-bottom: 100px;
+  padding: 50px;
+}
+
+.latestworkgallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.imagecontainer {
+  flex-grow: 1;
+  flex-basis: 400px;
+  overflow: hidden;
+}
+
+.imagecontainer > img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .latestwork {
+    padding: 0 !important;
+  }
+}

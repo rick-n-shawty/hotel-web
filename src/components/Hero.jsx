@@ -12,7 +12,7 @@ const Hero = () => {
       <Link to="model" className="position-relative m-0">
         <div className="overflow-hidden">
           <motion.img
-            src="https://images.unsplash.com/photo-1668502741331-09e1c8917496?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2022&q=80"
+            src="https://images.unsplash.com/photo-1611816055460-618287c870bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1936&q=80"
             alt="heroimg"
             initial={{ y: 20, opacity: 0 }}
             animate={{

@@ -1,0 +1,49 @@
+/*cards with repos*/
+.cardsmain {
+  margin-top: 100px;
+  padding: 50px;
+}
+
+.cardscontainer {
+  display: flex;
+  align-items: center;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+}
+
+.cards div {
+  border-top: 1px solid #d4d4d450;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: -25px;
+  background-color: rgb(15, 15, 15);
+}
+
+.cards div h2 {
+  font-weight: normal !important;
+  margin: 0px;
+  pointer-events: none;
+}
+
+.cards > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 900px) {
+  .cards > div {
+    display: block;
+    margin-bottom: -40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cardsmain {
+    padding: 0 !important;
+  }
+}
