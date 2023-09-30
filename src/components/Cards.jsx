@@ -6,61 +6,61 @@ const clients = [
     name: "Nordic Architects AB",
     jobRole: "Leading architecture firm",
     year: 2023,
-    color: "#FF725E", // Slightly darker pastel red
+    color: "#91ac9a", // Slightly darker pastel red
   },
   {
     name: "Nordic Concrete Creations",
     jobRole: "Concrete craftsmanship company",
     year: 2023,
-    color: "#77DD77", // Slightly darker pastel green
+    color: "#a9c3b6", // Slightly darker pastel green
   },
   {
     name: "Oslo Modern Art Museum",
     jobRole: "Art museum",
     year: 2023,
-    color: "#FFD700", // Pastel Gold (unchanged)
+    color: "#f1c5ae", // Pastel Gold (unchanged)
   },
   {
     name: "Helsinki Heritage Preservation Society",
     jobRole: "Heritage preservation organization",
     year: 2022,
-    color: "#6CA6CD", // Slightly darker pastel blue
+    color: "#b7d1d3", // Slightly darker pastel blue
   },
   {
     name: "Stockholm Interior Design",
     jobRole: "Interior design studio",
     year: 2022,
-    color: "#FFAEB9", // Slightly darker pastel pink
+    color: "#a6c3ce", // Slightly darker pastel pink
   },
   {
     name: "Copenhagen Urban Planning Authority",
     jobRole: "Urban planning authority",
     year: 2021,
-    color: "#FFD700", // Pastel Gold (unchanged)
+    color: "#8fb8ca", // Pastel Gold (unchanged)
   },
   {
     name: "The Nordic Concrete Symposium",
     jobRole: "Event organizer",
     year: 2021,
-    color: "#77DD77", // Slightly darker pastel green
+    color: "#92b1b6", // Slightly darker pastel green
   },
   {
     name: "Lena Andersson, Architectural Designer",
     jobRole: "Architectural designer",
     year: 2021,
-    color: "#FF725E", // Slightly darker pastel red
+    color: "#f1c5ae", // Slightly darker pastel red
   },
   {
     name: "Urban Explorers Magazine",
     jobRole: "Publication",
     year: 2021,
-    color: "#6CA6CD", // Slightly darker pastel blue
+    color: "#bcafbd", // Slightly darker pastel blue
   },
   {
     name: "Nordic Brutalist Enthusiast Club",
     jobRole: "Enthusiast club",
     year: 2021,
-    color: "#FFAEB9", // Slightly darker pastel pink
+    color: "#739086", // Slightly darker pastel pink
   },
 ];
 

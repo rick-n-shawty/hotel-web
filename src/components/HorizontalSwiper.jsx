@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
+import SlidingText from "./SlidingText";
 
 const images = [
   {
@@ -79,28 +80,31 @@ const HorizontalSwiper = () => {
   }, []);
 
   return (
-    <div className="vertical-scroll-container">
-      <div className="swiper-container">
-        <div className="swiper-wrapper">
-          {images.map((image, index) => (
-            <div className="swiper-slide" key={index}>
-              <p>{image.title}</p>
-              <motion.img
-                initial={{ filter: "blur(0.5em)", opacity: 0 }}
-                whileInView={{
-                  filter: "blur(0em)",
-                  opacity: 1,
-                  transition: { delay: 0.2, duration: 0.5 },
-                }}
-                src={image.url}
-                alt={image.title}
-                className="imageswiper"
-              />
-              <p style={{ marginTop: "16px" }}>{image.date}</p>
-            </div>
-          ))}
+    <div>
+      <div className="vertical-scroll-container">
+        <div className="swiper-container">
+          <div className="swiper-wrapper">
+            {images.map((image, index) => (
+              <div className="swiper-slide" key={index}>
+                <p>{image.title}</p>
+                <motion.img
+                  initial={{ filter: "blur(0.5em)", opacity: 0 }}
+                  whileInView={{
+                    filter: "blur(0em)",
+                    opacity: 1,
+                    transition: { delay: 0.2, duration: 0.5 },
+                  }}
+                  src={image.url}
+                  alt={image.title}
+                  className="imageswiper"
+                />
+                <p style={{ marginTop: "16px" }}>{image.date}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+      <SlidingText />
     </div>
   );
 };

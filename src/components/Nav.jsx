@@ -1,12 +1,17 @@
 import style from "../css/nav.module.css";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   return (
-    <nav className="navbar navbar-expand-lg p-0">
+    <motion.nav className="navbar navbar-expand-lg p-0">
       <div className="container-fluid p-0 d-flex align-items-baseline">
-        <RouterLink className="navbar-brand" to="/">
+        <RouterLink
+          className="navbar-brand"
+          to="/model"
+          style={{ lineHeight: 1 }}
+        >
           Sven Andersson
         </RouterLink>
         <button
@@ -78,7 +83,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
