@@ -4,7 +4,7 @@ import style from "../css/cards.module.css";
 const clients = [
   {
     name: "Nordic Architects AB",
-    jobRole: "Leading architecture firm",
+    jobRole: "Leadinfg architecture firm",
     year: 2023,
     color: "#91ac9a", // Slightly darker pastel red
   },
