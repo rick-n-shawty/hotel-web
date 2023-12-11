@@ -19,7 +19,6 @@ const Footer = () => {
         <div className={`col-sm-2 ${style.col}`}>
           <p className={style.gray}>Connect</p>
           <a className={`nav-link ${style.navlink}`}>Instagram</a>
-          <a className={`nav-link ${style.navlink}`}>LinkedIn</a>
           <a className={`nav-link ${style.navlink}`}>Facebook</a>
         </div>
       </div>

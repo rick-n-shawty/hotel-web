@@ -37,7 +37,7 @@ const About = () => {
     >
       <Work />
 
-      <Signature />
+      {/* <Signature /> */}
 
       <Cards />
 

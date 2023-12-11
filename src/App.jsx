@@ -4,16 +4,18 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { AnimatePresence } from "framer-motion";
 import { Fragment } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { createContext, useState } from "react";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Model from "./components/Model";
 import Footer from "./components/Footer";
 import HorizontalSwiper from "./components/HorizontalSwiper";
-
+export const LanguageContext = createContext(null)
 const App = () => {
   const location = useLocation();
-
+  const [ln,setLn] = useState("eng");
   return (
+    <LanguageContext.Provider value={[ln, setLn]}>
     <Fragment>
       <Nav />
       <AnimatePresence mode="wait">
@@ -24,11 +26,12 @@ const App = () => {
             exact
             path="/horizontalswiper"
             element={<HorizontalSwiper />}
-          />
+            />
         </Routes>
       </AnimatePresence>
       <Footer />
     </Fragment>
+    </LanguageContext.Provider>
   );
 };
 

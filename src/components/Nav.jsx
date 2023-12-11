@@ -12,7 +12,7 @@ const Nav = () => {
           to="/model"
           style={{ lineHeight: 1 }}
         >
-          Sven Andersson
+          Mont Inn
         </RouterLink>
         <button
           className="navbar-toggler p-0 text-white"
@@ -36,7 +36,7 @@ const Nav = () => {
               className={`${style.offcanvasHeader} offcanvas-header p-0 mb-3`}
             >
               <p className="navbar-brand text-white" id="offcanvasTopLabel">
-                Sven Andersson
+                Mont Inn
               </p>
               <button
                 type="button"
@@ -66,7 +66,7 @@ const Nav = () => {
               aria-current="page"
               to="/horizontalswiper"
             >
-              Gallery
+              Rooms
             </RouterLink>
             <ScrollLink
               className={`nav-link ${style.navlink}`}
@@ -77,7 +77,7 @@ const Nav = () => {
             </ScrollLink>
             <div className={style.offdesc}>
               <a href="mailto: #" className="navbar-brand">
-                svenandersson@gmail.com
+                hotel@gmail.com
               </a>
             </div>
           </div>

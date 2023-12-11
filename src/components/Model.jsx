@@ -34,7 +34,7 @@ const Model = () => {
               zIndex: 0,
             }}
           >
-            Sven Andersson Photography
+            Mont Inn
           </motion.h1>
           <motion.h1
             className={style.titleherosm}
@@ -47,7 +47,7 @@ const Model = () => {
               zIndex: 0,
             }}
           >
-            Sven Andersson Photography
+            Best hotel experience
           </motion.h1>
           <div className="d-flex justify-content-center">
             <motion.img
