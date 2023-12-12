@@ -50,19 +50,19 @@ const About = () => {
         <div className={`row`}>
           <div className={`col-md-6 ${style.colabout}`}>
             <p>
-              Sven Andersson Photography is a name synonymous with the art of
-              capturing the Nordic essence through the lens of a camera. Rooted
-              in the picturesque landscapes and rich cultural heritage of the
-              Nordic regions, Sven's work is a visual journey that unveils the
-              beauty of the North.
+            Welcome to Mont Inn, a serene retreat nestled in the heart of Tashkent. 
+            Our cozy hotel beckons with warmth and comfort, offering an inviting escape for 
+            travelers seeking tranquility and charm. At Mont Inn, experience the fusion of modern 
+            amenities and timeless elegance, where each guest is embraced with personalized hospitality. 
             </p>
           </div>
           <div className={`col-md-6 ${style.colabout}`}>
             <p>
-              Beyond landscapes, Sven's lens also captures the essence of Nordic
-              life. From the simplicity of Swedish design to the warmth of
-              Nordic hospitality, his photographs reflect the values and
-              lifestyle that make the Nordic region unique.
+            Relax in our thoughtfully curated rooms adorned with stylish decor, 
+            unwind in our tranquil surroundings, and savor delightful culinary experiences 
+            at our onsite restaurant. Whether you're here for a peaceful getaway or exploring 
+            the area's attractions, Mont Inn ensures a memorable stay filled with comfort, 
+            serenity, and a touch of timeless sophistication
             </p>
           </div>
         </div>

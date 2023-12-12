@@ -12,7 +12,8 @@ const Hero = () => {
       <Link to="model" className="position-relative m-0">
         <div className="overflow-hidden">
           <motion.img
-            src="https://images.unsplash.com/photo-1611816055460-618287c870bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1936&q=80"
+            // src="https://images.unsplash.com/photo-1611816055460-618287c870bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1936&q=80"
+            src="https://images.unsplash.com/photo-1551927411-95e412943b58?q=80&w=749&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="heroimg"
             initial={{ y: 20, opacity: 0 }}
             animate={{
@@ -40,7 +41,7 @@ const Hero = () => {
           className="nav-link d-flex justify-content-between align-items-center"
           style={{ position: "absolute", top: "-30px" }}
         >
-          <p>Photographer</p>
+          <p>The Best Hotel</p>
         </motion.div>
       </Link>
     </main>

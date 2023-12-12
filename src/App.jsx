@@ -9,7 +9,8 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Model from "./components/Model";
 import Footer from "./components/Footer";
-import HorizontalSwiper from "./components/HorizontalSwiper";
+import RoomsSwiper from "./components/RoomsSwiper";
+import CottagesSwiper from "./components/Cottages";
 export const LanguageContext = createContext(null)
 const App = () => {
   const location = useLocation();
@@ -24,9 +25,14 @@ const App = () => {
           <Route exact path="/model" element={<Model />} />
           <Route
             exact
-            path="/horizontalswiper"
-            element={<HorizontalSwiper />}
-            />
+            path="/rooms"
+            element={<RoomsSwiper />}
+          />
+          <Route
+          exact 
+          path="/cottages"
+          element={<CottagesSwiper/>}
+          />
         </Routes>
       </AnimatePresence>
       <Footer />

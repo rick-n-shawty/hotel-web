@@ -50,10 +50,10 @@ const SlidingText = () => {
               <i>I'm impressed.</i> - Interior design studio
             </h2>
             <h2>
-              <i>I enjoyed every part of the project.</i> - Art museum
+              <i>I enjoyed every part of the trip.</i> - Art museum
             </h2>
             <h2>
-              <i>Best photographer ever.</i> - Architectural designer
+              <i>Best hotel ever.</i> - Architectural designer
             </h2>
           </div>
           <div ref={secondText} className={style.pcont}>
@@ -64,10 +64,10 @@ const SlidingText = () => {
               <i>I'm impressed.</i> - Interior design studio
             </h2>
             <h2>
-              <i>I enjoyed every part of the project.</i> - Art museum
+              <i>I enjoyed every part of the trip.</i> - Art museum
             </h2>
             <h2>
-              <i>Best photographer ever.</i> - Architectural designer
+              <i>Best hotel ever.</i> - Architectural designer
             </h2>
           </div>
         </div>

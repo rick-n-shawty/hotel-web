@@ -42,7 +42,7 @@ const images = [
   },
 ];
 
-const HorizontalSwiper = () => {
+const RoomsSwiper = () => {
   useEffect(() => {
     // Initialize Swiper
     const swiper = new Swiper(".swiper-container", {
@@ -82,6 +82,7 @@ const HorizontalSwiper = () => {
   return (
     <div>
       <div className="vertical-scroll-container">
+        <h1>Rooms</h1>
         <div className="swiper-container">
           <div className="swiper-wrapper">
             {images.map((image, index) => (
@@ -109,4 +110,4 @@ const HorizontalSwiper = () => {
   );
 };
 
-export default HorizontalSwiper;
+export default RoomsSwiper;

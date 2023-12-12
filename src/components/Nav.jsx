@@ -64,7 +64,7 @@ const Nav = () => {
             <RouterLink
               className={`nav-link ${style.navlink}`}
               aria-current="page"
-              to="/horizontalswiper"
+              to="/rooms"
             >
               Rooms
             </RouterLink>

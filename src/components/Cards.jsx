@@ -3,62 +3,62 @@ import style from "../css/cards.module.css";
 
 const clients = [
   {
-    name: "Nordic Architects AB",
-    jobRole: "Leadinfg architecture firm",
+    name: "Housekeeping",
+    jobRole: "",
     year: 2023,
     color: "#91ac9a", // Slightly darker pastel red
   },
   {
-    name: "Nordic Concrete Creations",
-    jobRole: "Concrete craftsmanship company",
+    name: "Event Planning",
+    jobRole: "",
     year: 2023,
     color: "#a9c3b6", // Slightly darker pastel green
   },
   {
-    name: "Oslo Modern Art Museum",
-    jobRole: "Art museum",
+    name: "Parking",
+    jobRole: "",
     year: 2023,
     color: "#f1c5ae", // Pastel Gold (unchanged)
   },
   {
-    name: "Helsinki Heritage Preservation Society",
-    jobRole: "Heritage preservation organization",
+    name: "Free Wifi",
+    jobRole: "",
     year: 2022,
     color: "#b7d1d3", // Slightly darker pastel blue
   },
   {
-    name: "Stockholm Interior Design",
-    jobRole: "Interior design studio",
+    name: "Luggage",
+    jobRole: "",
     year: 2022,
     color: "#a6c3ce", // Slightly darker pastel pink
   },
   {
-    name: "Copenhagen Urban Planning Authority",
-    jobRole: "Urban planning authority",
+    name: "Room service",
+    jobRole: "",
     year: 2021,
     color: "#8fb8ca", // Pastel Gold (unchanged)
   },
   {
-    name: "The Nordic Concrete Symposium",
-    jobRole: "Event organizer",
+    name: "Breakfast",
+    jobRole: "",
     year: 2021,
     color: "#92b1b6", // Slightly darker pastel green
   },
   {
-    name: "Lena Andersson, Architectural Designer",
-    jobRole: "Architectural designer",
+    name: "Spa",
+    jobRole: "",
     year: 2021,
     color: "#f1c5ae", // Slightly darker pastel red
   },
   {
-    name: "Urban Explorers Magazine",
-    jobRole: "Publication",
+    name: "Restaurant",
+    jobRole: "",
     year: 2021,
     color: "#bcafbd", // Slightly darker pastel blue
   },
   {
-    name: "Nordic Brutalist Enthusiast Club",
-    jobRole: "Enthusiast club",
+    name: "Fitness club",
+    jobRole: "",
     year: 2021,
     color: "#739086", // Slightly darker pastel pink
   },
@@ -84,7 +84,7 @@ const Cards = () => {
 
   return (
     <div className={style.cardsmain}>
-      <h1>Clients</h1>
+      <h1>Other services</h1>
 
       <div className={style.cardscontainer}>
         <div className={style.cards}>
