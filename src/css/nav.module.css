@@ -1,4 +1,8 @@
 /*nav*/
+
+.nav-toggle{
+  color: red;
+}
 .offcanvas {
   background-color: rgb(15, 15, 15) !important;
   backdrop-filter: blur(0.5em);
@@ -7,7 +11,6 @@
   height: 100% !important;
   width: 90% !important;
 }
-
 .offcanvasBody {
   margin-left: auto;
   padding: 20px;
@@ -20,7 +23,6 @@
 .offdesc > h3 {
   font-size: 20px !important;
 }
-
 @media screen and (max-width: 991px) {
   .navlink {
     padding: 0 !important;

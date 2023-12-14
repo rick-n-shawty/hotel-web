@@ -18,6 +18,11 @@ const Work = () => {
     cottageText = "Коттеджи"
     roomText = "Номера"
     otherText = "Другие услуги"
+  }else if(ln === 'uz'){  
+    hText = "Our sevices"
+    cottageText = "Cottages"
+    roomText = "Rooms"
+    otherText = "Other services"
   }
   return (
     <div className={style.latestwork}>
@@ -26,7 +31,7 @@ const Work = () => {
         <div className={style.imagecontainer}>
           <RouterLink to={"/cottages"}>
             <img
-              src="https://images.unsplash.com/photo-1470075801209-17f9ec0cada6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+              src="https://d2pe372uz1yk5d.cloudfront.net/IMG_1465.JPG"
               alt="img"
             />
           </RouterLink>
@@ -35,13 +40,13 @@ const Work = () => {
         <div className={style.imagecontainer}>
           <RouterLink to={"/rooms"}>
             <img
-              src="https://images.unsplash.com/photo-1666962890710-c26d3effb9d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+              src="https://d2pe372uz1yk5d.cloudfront.net/IMG_1462.JPG"
               alt="img"
             />
           </RouterLink>
           <p>{roomText}</p>
         </div>
-        {/* <div className={style.imagecontainer}>
+        <div className={style.imagecontainer}>
           <RouterLink>
             <img
               src="https://images.unsplash.com/photo-1693362287391-fc96c0e5e489?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
@@ -49,7 +54,7 @@ const Work = () => {
             />
           </RouterLink>
           <p>{otherText}</p>
-        </div> */}
+        </div>
       </div>
     </div>
   );

@@ -119,7 +119,7 @@ const Nav = () => {
               {contactText}
             </ScrollLink>
             <div className={`nav-link ${style.navlink}`}>
-              <button onClick={toggleLanguage}>{btnText}</button>
+              <button className="nav-toggle" onClick={toggleLanguage}>{btnText}</button>
             </div>
             <div className={style.offdesc}>
               <a href="mailto: #" className="navbar-brand">
