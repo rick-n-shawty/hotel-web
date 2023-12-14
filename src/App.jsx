@@ -14,15 +14,15 @@ import CottagesSwiper from "./components/Cottages";
 export const LanguageContext = createContext(null)
 const App = () => {
   const location = useLocation();
-  const [ln,setLn] = useState("eng");
+  const [ln,setLn] = useState("rus");
   return (
     <LanguageContext.Provider value={[ln, setLn]}>
     <Fragment>
       <Nav />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.key}>
-          <Route exact path="/" element={<Hero />} />
-          <Route exact path="/model" element={<Model />} />
+          <Route exact path="/" element={<Model />} />
+          {/* <Route exact path="/model" element={<Model />} /> */}
           <Route
             exact
             path="/rooms"

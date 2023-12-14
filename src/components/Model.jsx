@@ -1,10 +1,11 @@
 import { motion, cubicBezier } from "framer-motion";
 import About from "./About";
 import style from "../css/model.module.css";
-
+import { useContext } from "react";
+import { LanguageContext } from "../App";
 const customEasing = cubicBezier(0.6, 0.01, -0.05, 0.9);
 const transition = { duration: 1.4, ease: customEasing };
-
+const MODEL_URL = "https://d2pe372uz1yk5d.cloudfront.net/modelImage.JPG"
 const letter = {
   initial: {
     y: 400,
@@ -14,8 +15,16 @@ const letter = {
     transition: { duration: 1, ...transition },
   },
 };
-
 const Model = () => {
+  const [ln, setLn] = useContext(LanguageContext)
+  let msg; 
+  if(ln === 'rus'){
+    msg = 'Лучшие впечатления от отеля'
+  }else if(ln === 'uz'){
+    msg = 'Best hotel experience'
+  }else if(ln === 'eng'){
+    msg = 'Best hotel experience'
+  }
   return (
     <section>
       <article
@@ -34,7 +43,7 @@ const Model = () => {
               zIndex: 0,
             }}
           >
-            Mont Inn
+            {msg}
           </motion.h1>
           <motion.h1
             className={style.titleherosm}
@@ -51,8 +60,8 @@ const Model = () => {
           </motion.h1>
           <div className="d-flex justify-content-center">
             <motion.img
-              src="https://images.unsplash.com/photo-1551927411-95e412943b58?q=80&w=749&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              // src="https://images.unsplash.com/photo-1611816055460-618287c870bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1936&q=80"
+              // src={modelImageUrl}
+              src={MODEL_URL}
               alt="modelimg"
               initial={{
                 width: "300px",

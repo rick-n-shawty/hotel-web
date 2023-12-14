@@ -16,6 +16,9 @@
   flex-basis: 400px;
   overflow: hidden;
 }
+.imagecontainer > p{
+  font-size: 1.4rem;
+}
 
 .imagecontainer > a > img {
   width: 100%;

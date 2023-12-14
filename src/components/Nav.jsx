@@ -2,14 +2,57 @@ import style from "../css/nav.module.css";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
-
+import { LanguageContext } from "../App";
+import { useContext } from "react";
 const Nav = () => {
+  const [ln, setLn] = useContext(LanguageContext);
+  const toggleLanguage = (e) => {
+    if(ln === 'rus'){
+      setLn("uz")
+    }else if(ln === 'uz'){
+      setLn("eng")
+    }else if(ln === 'eng'){
+      setLn("rus")
+    }
+  } 
+  let btnText; 
+  let homeText; 
+  let aboutText; 
+  let roomText; 
+  let contactText; 
+  let menuText;
+  let closeText;
+  if(ln === 'eng'){
+    btnText = "English"
+    homeText = "Home"
+    aboutText = "About"
+    roomText = "Rooms"
+    contactText = "Contact"
+    menuText = "menu"
+    closeText = "close"
+  }else if(ln === 'uz'){
+    btnText = "Uzbek"
+    homeText = "Home"
+    aboutText = "About"
+    roomText = "Rooms"
+    contactText = "Contact"
+    menuText = "menu"
+    closeText = "close"
+  }else if(ln === 'rus'){
+    btnText = "Русский"
+    homeText = "Главная"
+    aboutText = "O нас"
+    roomText = "Номера"
+    contactText = "Связаться"
+    menuText = "меню"
+    closeText = "закрыть"
+  }
   return (
     <motion.nav className="navbar navbar-expand-lg p-0">
       <div className="container-fluid p-0 d-flex align-items-baseline">
         <RouterLink
           className="navbar-brand"
-          to="/model"
+          to="/"
           style={{ lineHeight: 1 }}
         >
           Mont Inn
@@ -23,7 +66,7 @@ const Nav = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          menu
+          {menuText}
         </button>
         <div
           className={`${style.offcanvas} offcanvas offcanvas-start`}
@@ -44,37 +87,40 @@ const Nav = () => {
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               >
-                close
+                {closeText}
               </button>
             </div>
             <RouterLink
               className={`nav-link active ${style.navlink}`}
               aria-current="page"
-              to="/model"
+              to="/"
             >
-              Home
+              {homeText}
             </RouterLink>
             <ScrollLink
               className={`nav-link ${style.navlink}`}
               aria-current="page"
               to="about"
             >
-              About
+              {aboutText}
             </ScrollLink>
             <RouterLink
               className={`nav-link ${style.navlink}`}
               aria-current="page"
               to="/rooms"
             >
-              Rooms
+              {roomText}
             </RouterLink>
             <ScrollLink
               className={`nav-link ${style.navlink}`}
               aria-current="page"
               to="footer"
             >
-              Contact
+              {contactText}
             </ScrollLink>
+            <div className={`nav-link ${style.navlink}`}>
+              <button onClick={toggleLanguage}>{btnText}</button>
+            </div>
             <div className={style.offdesc}>
               <a href="mailto: #" className="navbar-brand">
                 hotel@gmail.com
