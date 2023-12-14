@@ -25,8 +25,13 @@ const App = () => {
           {/* <Route exact path="/model" element={<Model />} /> */}
           <Route
             exact
-            path="/rooms"
-            element={<RoomsSwiper />}
+            path="/rooms/one"
+            element={<RoomsSwiper type={1}/>}
+          />
+          <Route
+            exact
+            path="/rooms/two"
+            element={<RoomsSwiper type={2}/>}
           />
           <Route
           exact 

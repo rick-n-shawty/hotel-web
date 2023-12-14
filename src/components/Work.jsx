@@ -9,7 +9,7 @@ const Work = () => {
   let roomOneText;
   let roomTwoText;
   if(ln === 'eng'){
-    hText = "Our sevices"
+    hText = "Our sevices:"
     cottageText = "Cottages"
     roomOneText = "Room for one"
     roomTwoText = "Room for two"
@@ -19,10 +19,10 @@ const Work = () => {
     roomOneText = "Номер на одного"
     roomTwoText = "Номер на двоих"
   }else if(ln === 'uz'){  
-    hText = "Our sevices"
+    hText = "Our sevices:"
     cottageText = "Cottages"
-    roomOneText = "Rooms"
-    roomTwoText = "Other services"
+    roomOneText = "Room for one"
+    roomTwoText = "Room for two"
   }
   return (
     <div className={style.latestwork}>
@@ -38,7 +38,7 @@ const Work = () => {
           <p>{cottageText}</p>
         </div>
         <div className={style.imagecontainer}>
-          <RouterLink to={"/rooms"}>
+          <RouterLink to={"/rooms/one"} aria-current="page">
             <img
               src="https://d2pe372uz1yk5d.cloudfront.net/IMG_2040.JPG"
               alt="img"
@@ -47,7 +47,7 @@ const Work = () => {
           <p>{roomOneText}</p>
         </div>
         <div className={style.imagecontainer}>
-          <RouterLink>
+          <RouterLink to={"/rooms/two"} aria-current="page">
             <img
               src="https://d2pe372uz1yk5d.cloudfront.net/IMG_1462.JPG"
               alt="img"

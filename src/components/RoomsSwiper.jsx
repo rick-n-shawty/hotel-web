@@ -1,48 +1,59 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { motion } from "framer-motion";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
-import SlidingText from "./SlidingText";
-
+import { LanguageContext } from "../App";
 const images = [
   {
-    url: "https://images.unsplash.com/photo-1695078071178-521b9ca3289d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80",
-    title: "Bhutan - Thimphu",
-    date: "2023",
+    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1456.JPG",
   },
   {
-    url: "https://images.unsplash.com/photo-1505080463650-543249075093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
-    title: "Iceland - Reykjavik",
-    date: "2023",
+    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1456.JPG",
   },
   {
-    url: "https://images.unsplash.com/photo-1558690625-96d7a11c0215?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1430&q=80",
-    title: "Bhutan - Paro",
-    date: "2023",
+    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1462.JPG",
   },
   {
-    url: "https://images.unsplash.com/photo-1694665815989-235c2049ef73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80",
-    title: "Namibia - Swakopmund",
-    date: "2022",
+    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1459.JPG",
   },
   {
-    url: "https://images.unsplash.com/photo-1610538216006-ff8246335182?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
-    title: "Croatia - Dubrovnik",
-    date: "2022",
+    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1456.JPG",
   },
   {
-    url: "https://images.unsplash.com/photo-1611702700098-dec597b27d9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
-    title: "Bolivia - Sucre",
-    date: "2021",
+    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1456.JPG",
   },
   {
-    url: "https://images.unsplash.com/photo-1588964258146-787046c32910?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80",
-    title: "Lebanon - Byblos (Jbeil)",
-    date: "2021",
+    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1456.JPG",
   },
 ];
 
-const RoomsSwiper = () => {
+const RoomsSwiper = ({type}) => {
+  const [ln, setLn] = useContext(LanguageContext); 
+  let h1Text;
+  let priceText;
+  if(type == 1){
+    if(ln === 'rus'){
+      h1Text = "Номер на одного"
+      priceText = "Цена:"
+    }else if(ln === 'eng'){
+      h1Text = "Room for one"
+      priceText = "Price:"
+    }else if(ln === 'uz'){
+      h1Text = "Room for one"
+      priceText = "Price:"
+    }
+  }else{
+    if(ln === 'rus'){
+      h1Text = "Номер на двоих"
+      priceText = "Цена:"
+    }else if(ln === 'eng'){
+      h1Text = "Room for two"
+      priceText = "Price:"
+    }else if(ln === 'uz'){
+      h1Text = "Room for two"
+      priceText = "Price:"
+    }
+  }
   useEffect(() => {
     // Initialize Swiper
     const swiper = new Swiper(".swiper-container", {
@@ -82,12 +93,13 @@ const RoomsSwiper = () => {
   return (
     <div>
       <div className="vertical-scroll-container">
-        <h1>Rooms</h1>
+        <h1>{h1Text}</h1>
+        <h2>{priceText}</h2>
         <div className="swiper-container">
           <div className="swiper-wrapper">
             {images.map((image, index) => (
               <div className="swiper-slide" key={index}>
-                <p>{image.title}</p>
+                {/* <p>{image.title}</p> */}
                 <motion.img
                   initial={{ filter: "blur(0.5em)", opacity: 0 }}
                   whileInView={{
@@ -99,13 +111,13 @@ const RoomsSwiper = () => {
                   alt={image.title}
                   className="imageswiper"
                 />
-                <p style={{ marginTop: "16px" }}>{image.date}</p>
+                {/* <p style={{ marginTop: "16px" }}>{image.date}</p> */}
               </div>
             ))}
           </div>
         </div>
       </div>
-      <SlidingText />
+      {/* <SlidingText /> */}
     </div>
   );
 };

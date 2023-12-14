@@ -100,17 +100,17 @@ const Nav = () => {
             <ScrollLink
               className={`nav-link ${style.navlink}`}
               aria-current="page"
-              to="about"
+              to="footer"
             >
               {aboutText}
             </ScrollLink>
-            <RouterLink
+            <ScrollLink
               className={`nav-link ${style.navlink}`}
               aria-current="page"
-              to="/rooms"
+              to="about"
             >
               {roomText}
-            </RouterLink>
+            </ScrollLink>
             <ScrollLink
               className={`nav-link ${style.navlink}`}
               aria-current="page"
