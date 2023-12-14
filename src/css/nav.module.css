@@ -1,8 +1,4 @@
 /*nav*/
-
-.nav-toggle{
-  color: red;
-}
 .offcanvas {
   background-color: rgb(15, 15, 15) !important;
   backdrop-filter: blur(0.5em);

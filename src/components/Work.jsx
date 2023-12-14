@@ -6,23 +6,23 @@ const Work = () => {
   const [ln, setLn] = useContext(LanguageContext)
   let hText; 
   let cottageText; 
-  let roomText;
-  let otherText;
+  let roomOneText;
+  let roomTwoText;
   if(ln === 'eng'){
     hText = "Our sevices"
     cottageText = "Cottages"
-    roomText = "Rooms"
-    otherText = "Other services"
+    roomOneText = "Room for one"
+    roomTwoText = "Room for two"
   }else if(ln === 'rus'){
     hText = "Наши услуги:"
     cottageText = "Коттеджи"
-    roomText = "Номера"
-    otherText = "Другие услуги"
+    roomOneText = "Номер на одного"
+    roomTwoText = "Номер на двоих"
   }else if(ln === 'uz'){  
     hText = "Our sevices"
     cottageText = "Cottages"
-    roomText = "Rooms"
-    otherText = "Other services"
+    roomOneText = "Rooms"
+    roomTwoText = "Other services"
   }
   return (
     <div className={style.latestwork}>
@@ -40,20 +40,20 @@ const Work = () => {
         <div className={style.imagecontainer}>
           <RouterLink to={"/rooms"}>
             <img
-              src="https://d2pe372uz1yk5d.cloudfront.net/IMG_1462.JPG"
+              src="https://d2pe372uz1yk5d.cloudfront.net/IMG_2040.JPG"
               alt="img"
             />
           </RouterLink>
-          <p>{roomText}</p>
+          <p>{roomOneText}</p>
         </div>
         <div className={style.imagecontainer}>
           <RouterLink>
             <img
-              src="https://images.unsplash.com/photo-1693362287391-fc96c0e5e489?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+              src="https://d2pe372uz1yk5d.cloudfront.net/IMG_1462.JPG"
               alt="img"
             />
           </RouterLink>
-          <p>{otherText}</p>
+          <p>{roomTwoText}</p>
         </div>
       </div>
     </div>
