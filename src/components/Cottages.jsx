@@ -1,22 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { motion } from "framer-motion";
 import Swiper from "swiper";
+import { LanguageContext } from "../App";
 import "swiper/swiper-bundle.css"; 
+const cloudDomain = "https://d2pe372uz1yk5d.cloudfront.net"
 
 const images = [
     {
-        url: "https://images.unsplash.com/photo-1695078071178-521b9ca3289d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80",
-        title: "Bhutan - Thimphu",
-        date: "2023",
+        url: `${cloudDomain}/IMG_1468.JPG`,
     },
     {
-        url: "https://images.unsplash.com/photo-1505080463650-543249075093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
-        title: "Iceland - Reykjavik",
-        date: "2023",
+        url: `${cloudDomain}/IMG_1477.JPG`,
     },
+    {
+      url: `${cloudDomain}/IMG_1472.JPG`
+    },
+    {
+      url: `${cloudDomain}/IMG_1471.JPG`
+    },
+    {
+      url: `${cloudDomain}/IMG_1466.JPG`
+    },
+    {
+      url: `${cloudDomain}/IMG_1467.JPG`
+    }
 ]
 
 const CottagesSwiper = () => {
+    const [ln, setLn] = useContext(LanguageContext)
+
     useEffect(() => {
         // Initialize Swiper
         const swiper = new Swiper(".swiper-container", {
@@ -52,29 +64,59 @@ const CottagesSwiper = () => {
           swiper.destroy(true, true);
         };
       }, []);
+
+    const cottageCards = images.map((image, index) => (
+      <div className="swiper-slide" key={index}>
+      <motion.img
+          initial={{ filter: "blur(0.5em)", opacity: 0 }}
+          whileInView={{
+          filter: "blur(0em)",
+          opacity: 1,
+          transition: { delay: 0.2, duration: 0.5 },
+          }}
+          src={image.url}
+          alt={"image"}
+          className="imageswiper"
+      />
+      </div>
+      ))
+    let h1Text;
+    let pricePerNight; 
+    let priceWeekDays = "$300"
+    let priceWeekEnds = "$350"  
+    let priceWeekDaysText; 
+    let priceWeekEndsText;
+    switch(ln){
+      case "rus":
+        h1Text = "Коттеджи" 
+        pricePerNight = "Цена за ночь"
+        priceWeekDaysText = "Будни: " + priceWeekDays 
+        priceWeekEndsText = "Выходные: " + priceWeekEnds
+        break;
+      case "eng":
+        h1Text = "Cottages"
+        pricePerNight = "Price per night"
+        priceWeekDaysText = "Weeekdays: " + priceWeekDays 
+        priceWeekEndsText = "Weekends: " + priceWeekEnds
+        break; 
+        case "uz":
+          h1Text = "Cottages"
+          pricePerNight = "Price per night"
+          priceWeekDaysText = "Weeekdays: " + priceWeekDays 
+          priceWeekEndsText = "Weekends: " + priceWeekEnds
+        break; 
+      default:
+        h1Text = "Cottages" 
+    }
     return (
         <div>
             <div className="vertical-scroll-container">
             <div className="swiper-container">
-                <h1>Cottages</h1>
+                <h1>{h1Text}</h1>
+                <h2>{pricePerNight}</h2>
+                <h3>{priceWeekDaysText}, {priceWeekEndsText}</h3>
                 <div className="swiper-wrapper">
-                {images.map((image, index) => (
-                    <div className="swiper-slide" key={index}>
-                    <p>{image.title}</p>
-                    <motion.img
-                        initial={{ filter: "blur(0.5em)", opacity: 0 }}
-                        whileInView={{
-                        filter: "blur(0em)",
-                        opacity: 1,
-                        transition: { delay: 0.2, duration: 0.5 },
-                        }}
-                        src={image.url}
-                        alt={image.title}
-                        className="imageswiper"
-                    />
-                    <p style={{ marginTop: "16px" }}>{image.date}</p>
-                    </div>
-                ))}
+                  {cottageCards}
                 </div>
             </div>
             </div>

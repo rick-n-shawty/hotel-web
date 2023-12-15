@@ -40,7 +40,7 @@ const Work = () => {
         <div className={style.imagecontainer}>
           <RouterLink to={"/rooms/one"} aria-current="page">
             <img
-              src="https://d2pe372uz1yk5d.cloudfront.net/IMG_2040.JPG"
+              src="https://d2pe372uz1yk5d.cloudfront.net/IMG_1464.JPG"
               alt="img"
             />
           </RouterLink>

@@ -7,70 +7,70 @@ const services = [
     nameEng: "Housekeeping",
     nameRus: "Уборка номеров",
     nameUz: "Housekeeping",
-    jobRole: "",
+    price: "",
     color: "#91ac9a", // Slightly darker pastel red
   },
   {
     nameEng: "Event Planning",
     nameRus: "Планирование мероприятий",
     nameUz: "",
-    jobRole: "",
+    price: "",
     color: "#a9c3b6", // Slightly darker pastel green
   },
   {
     nameEng: "Parking",
     nameRus: "Стоянка",
     nameUz: "",
-    jobRole: "",
+    price: "",
     color: "#f1c5ae", // Pastel Gold (unchanged)
   },
   {
     nameEng: "Free Wifi",
     nameRus: "Бесплатный Интернет",
     nameUz: "",
-    jobRole: "",
+    price: "",
     color: "#b7d1d3", // Slightly darker pastel blue
   },
   {
     nameEng: "Caraoke",
     nameRus: "Караоке",
     nameUz: "Caraoke",
-    jobRole: "",
+    price: "",
     color: "#a6c3ce", // Slightly darker pastel pink
   },
   {
     nameEng: "Swimming pool",
     nameRus: "Бассейн",
     nameUz: "",
-    jobRole: "",
+    price: "",
     color: "#8fb8ca", // Pastel Gold (unchanged)
   },
   {
     nameEng: "Breakfast",
     nameRus: "Завтрак",
     nameUz: "",
-    jobRole: "",
+    price: "",
     color: "#92b1b6", // Slightly darker pastel green
   },
   {
     nameEng: "PlayStation 5",
     nameRus: "PlayStation 5",
     nameUz: "PlayStation 5",
-    jobRole: "",
+    price: "",
     color: "#f1c5ae", // Slightly darker pastel red
   },
   {
     nameEng: "Restaurant",
     nameRus: "Ресторан",
     nameUz: "",
-    jobRole: "",
+    price: "",
     color: "#bcafbd", // Slightly darker pastel blue
   },
   {
     nameEng: "Sauna",
     nameRus: "Сауна",
     nameUz: "Sauna",
-    jobRole: "",
+    price: "",
     color: "#739086", // Slightly darker pastel pink
   },
 ];
@@ -110,7 +110,7 @@ const Cards = () => {
       >
          
         <h2 className={style.heroSubtitle}>{service.nameEng}</h2>
-        <p>{service.jobRole}</p>
+        <p>{service.price}</p>
       </div>
     ))
   }else if(ln === 'rus'){
@@ -126,7 +126,7 @@ const Cards = () => {
       >
          
         <h2 className={style.heroSubtitle}>{service.nameRus}</h2>
-        <p>{service.jobRole}</p>
+        <p>{service.price}</p>
       </div>
     ))
     h1Text = "Другие услуги"
@@ -144,7 +144,7 @@ const Cards = () => {
       >
          
         <h2 className={style.heroSubtitle}>{service.nameUz}</h2>
-        <p>{service.jobRole}</p>
+        <p>{service.price}</p>
       </div>
     ))
   }

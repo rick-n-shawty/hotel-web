@@ -30,11 +30,13 @@ const Footer = () => {
         </div>
         <div className={`col-sm-5 ${style.col}`}>
           <p className={style.gray}>{callText}</p>
-          <p className="m-0">+998902341489</p>
+          <p className="m-0">+998770760220</p>
+          <p className="m-0">+998505015885</p>
         </div>
         <div className={`col-sm-2 ${style.col}`}>
           <p className={style.gray}>{socialMediaText}</p>
-          <a className={`nav-link ${style.navlink}`}>Instagram</a>
+          <a href="https://www.instagram.com/mont.inn/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" 
+          target="_blank" className={`nav-link ${style.navlink}`}>Instagram</a>
           <a className={`nav-link ${style.navlink}`}>Facebook</a>
         </div>
       </div>

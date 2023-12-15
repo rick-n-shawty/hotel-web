@@ -12,6 +12,8 @@ import Footer from "./components/Footer";
 import RoomsSwiper from "./components/RoomsSwiper";
 import CottagesSwiper from "./components/Cottages";
 export const LanguageContext = createContext(null)
+export const CLOUD_URL = "https://d2pe372uz1yk5d.cloudfront.net"
+export const API_DOMAIN = ""
 const App = () => {
   const location = useLocation();
   const [ln,setLn] = useState("rus");

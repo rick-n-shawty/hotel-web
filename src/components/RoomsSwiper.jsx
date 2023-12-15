@@ -3,56 +3,117 @@ import { motion } from "framer-motion";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
 import { LanguageContext } from "../App";
-const images = [
+import { CLOUD_URL } from "../App";
+const roomForOneImages = [
   {
-    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1456.JPG",
+    url: `${CLOUD_URL}/IMG_1464.JPG`,
   },
   {
-    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1456.JPG",
+    url: `${CLOUD_URL}/IMG_2023.JPG`,
   },
   {
-    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1462.JPG",
+    url: `${CLOUD_URL}/IMG_1462.JPG`,
   },
   {
-    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1459.JPG",
+    url: `${CLOUD_URL}/IMG_1459.JPG`,
   },
   {
-    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1456.JPG",
-  },
-  {
-    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1456.JPG",
-  },
-  {
-    url: "https://d2pe372uz1yk5d.cloudfront.net/IMG_1456.JPG",
+    url: `${CLOUD_URL}/IMG_2025.JPG`,
   },
 ];
 
+const roomForTwoImages = [
+  {
+    url: `${CLOUD_URL}/IMG_1464.JPG`,
+  },
+  {
+    url: `${CLOUD_URL}/IMG_2023.JPG`,
+  },
+  {
+    url: `${CLOUD_URL}/IMG_1462.JPG`,
+  },
+  {
+    url: `${CLOUD_URL}/IMG_1459.JPG`,
+  },
+  {
+    url: `${CLOUD_URL}/IMG_2025.JPG`,
+  },
+]
 const RoomsSwiper = ({type}) => {
   const [ln, setLn] = useContext(LanguageContext); 
   let h1Text;
-  let priceText;
+  let priceTextNorm;
+  let priceTextWeekEnd; 
+  let images = []
+  let priceWeekdays;
+  let priceWeekends;  
   if(type == 1){
+    priceWeekdays = "$70"
+    priceWeekends = "$90"
     if(ln === 'rus'){
-      h1Text = "Номер на одного"
-      priceText = "Цена:"
+      h1Text = "Номер на одного" 
     }else if(ln === 'eng'){
       h1Text = "Room for one"
-      priceText = "Price:"
     }else if(ln === 'uz'){
       h1Text = "Room for one"
-      priceText = "Price:"
-    }
+    } 
+    images = roomForOneImages.map((image, index) => (
+      <div className="swiper-slide" key={index}>
+        <motion.img
+          initial={{ filter: "blur(0.5em)", opacity: 0 }}
+          whileInView={{
+            filter: "blur(0em)",
+            opacity: 1,
+            transition: { delay: 0.2, duration: 0.5 },
+          }}
+          src={image.url}
+          alt={"image"}
+          className="imageswiper"
+        />
+      </div>
+    ))
   }else{
+    priceWeekdays = "$100"
+    priceWeekends = "$120"
     if(ln === 'rus'){
       h1Text = "Номер на двоих"
-      priceText = "Цена:"
     }else if(ln === 'eng'){
       h1Text = "Room for two"
-      priceText = "Price:"
     }else if(ln === 'uz'){
       h1Text = "Room for two"
-      priceText = "Price:"
     }
+    images = roomForTwoImages.map((image, index) => (
+      <div className="swiper-slide" key={index}>
+        <motion.img
+          initial={{ filter: "blur(0.5em)", opacity: 0 }}
+          whileInView={{
+            filter: "blur(0em)",
+            opacity: 1,
+            transition: { delay: 0.2, duration: 0.5 },
+          }}
+          src={image.url}
+          alt={"image"}
+          className="imageswiper"
+          />
+      </div>
+    ))
+  }
+  switch(ln){
+    case "rus":
+      priceTextNorm = "Цена в будние дни: " + priceWeekdays
+      priceTextWeekEnd = "Цена в выходные дни: " + priceWeekends
+      break;
+    case "eng":
+      priceTextNorm = "Price on weekdays: " + priceWeekdays
+      priceTextWeekEnd = "Price on weekends: " + priceWeekends
+      break;
+    case "uz":
+      priceTextNorm = "Price on weekdays: " + priceWeekdays
+      priceTextWeekEnd = "Price on weekends: " + priceWeekends
+      break;
+    default:
+      priceTextNorm = "Price on weekdays: " + priceWeekdays
+      priceTextWeekEnd = "Price on weekends: " + priceWeekends  
   }
   useEffect(() => {
     // Initialize Swiper
@@ -94,26 +155,11 @@ const RoomsSwiper = ({type}) => {
     <div>
       <div className="vertical-scroll-container">
         <h1>{h1Text}</h1>
-        <h2>{priceText}</h2>
+        <h2>{priceTextNorm}</h2>
+        <h2>{priceTextWeekEnd}</h2>
         <div className="swiper-container">
           <div className="swiper-wrapper">
-            {images.map((image, index) => (
-              <div className="swiper-slide" key={index}>
-                {/* <p>{image.title}</p> */}
-                <motion.img
-                  initial={{ filter: "blur(0.5em)", opacity: 0 }}
-                  whileInView={{
-                    filter: "blur(0em)",
-                    opacity: 1,
-                    transition: { delay: 0.2, duration: 0.5 },
-                  }}
-                  src={image.url}
-                  alt={image.title}
-                  className="imageswiper"
-                />
-                {/* <p style={{ marginTop: "16px" }}>{image.date}</p> */}
-              </div>
-            ))}
+            {images}
           </div>
         </div>
       </div>
