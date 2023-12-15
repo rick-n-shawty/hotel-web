@@ -3,7 +3,8 @@ import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
 import { LanguageContext } from "../App";
-import { useContext } from "react";
+import { useContext } from "react"; 
+import languageIcon from "../../public/language.svg";
 const Nav = () => {
   const [ln, setLn] = useContext(LanguageContext);
   const toggleLanguage = (e) => {
@@ -119,11 +120,15 @@ const Nav = () => {
               {contactText}
             </ScrollLink>
             <div className={`nav-link ${style.navlink}`}>
-              <button className="nav-toggle" onClick={toggleLanguage}>{btnText}</button>
+              <button className="nav-toggle" onClick={toggleLanguage}>
+                  {btnText} 
+                  <img src="https://img.icons8.com/ios/50/FFFFFF/globe--v1.png" alt="globe--v1"></img>
+              </button>
+              {/* <span class="material-symbols-outlined">language</span> */}
             </div>
             <div className={style.offdesc}>
               <a href="mailto: #" className="navbar-brand">
-                hotel@gmail.com
+                +998505015885
               </a>
             </div>
           </div>

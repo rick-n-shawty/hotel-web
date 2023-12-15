@@ -109,6 +109,8 @@ hr {
   touch-action: pan-y;
 }
 .nav-toggle{
+  display: flex;
+  align-items: center;
   border: none;
   font-family: "Montserrat", sans-serif !important;
   border-radius: 4px;
@@ -117,4 +119,14 @@ hr {
   margin: 0;
   color: white;
   background-color: transparent;
+  gap: .2rem;
+} 
+.nav-toggle > img{
+  height: 25px;
 }
+@media (max-width: 991px) {
+  .nav-toggle > img{
+    height: 45px; 
+  }
+}
+

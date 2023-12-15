@@ -35,14 +35,14 @@ const services = [
     nameEng: "Caraoke",
     nameRus: "Караоке",
     nameUz: "Caraoke",
-    price: "",
+    price: "UZS 100.000-150.000",
     color: "#a6c3ce", // Slightly darker pastel pink
   },
   {
-    nameEng: "Swimming pool",
-    nameRus: "Бассейн",
+    nameEng: "Sauna with a Swimming pool",
+    nameRus: "Сауна c бассейном",
     nameUz: "",
-    price: "",
+    price: "UZS 300.000",
     color: "#8fb8ca", // Pastel Gold (unchanged)
   },
   {
@@ -56,7 +56,7 @@ const services = [
     nameEng: "PlayStation 5",
     nameRus: "PlayStation 5",
     nameUz: "PlayStation 5",
-    price: "",
+    price: "UZS 100.000-150.000",
     color: "#f1c5ae", // Slightly darker pastel red
   },
   {
@@ -65,14 +65,7 @@ const services = [
     nameUz: "",
     price: "",
     color: "#bcafbd", // Slightly darker pastel blue
-  },
-  {
-    nameEng: "Sauna",
-    nameRus: "Сауна",
-    nameUz: "Sauna",
-    price: "",
-    color: "#739086", // Slightly darker pastel pink
-  },
+  }
 ];
 
 const Cards = () => {
