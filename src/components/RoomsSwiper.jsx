@@ -3,40 +3,39 @@ import { motion } from "framer-motion";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
 import { LanguageContext } from "../App";
-import { CLOUD_URL } from "../App";
 const roomForOneImages = [
   {
-    url: `${CLOUD_URL}/IMG_1464.JPG`,
+    url: `https://d2pe372uz1yk5d.cloudfront.net/IMG_1464.JPG`,
   },
   {
-    url: `${CLOUD_URL}/IMG_2023.JPG`,
+    url: `https://d2pe372uz1yk5d.cloudfront.net/IMG_2023.JPG`,
   },
   {
-    url: `${CLOUD_URL}/IMG_1462.JPG`,
+    url: `https://d2pe372uz1yk5d.cloudfront.net/IMG_1462.JPG`,
   },
   {
-    url: `${CLOUD_URL}/IMG_1459.JPG`,
+    url: `https://d2pe372uz1yk5d.cloudfront.net/IMG_1459.JPG`,
   },
   {
-    url: `${CLOUD_URL}/IMG_2025.JPG`,
+    url: `https://d2pe372uz1yk5d.cloudfront.net/IMG_2025.JPG`,
   },
 ];
 
 const roomForTwoImages = [
   {
-    url: `${CLOUD_URL}/IMG_1464.JPG`,
+    url: `https://d2pe372uz1yk5d.cloudfront.net/IMG_1464.JPG`,
   },
   {
-    url: `${CLOUD_URL}/IMG_2023.JPG`,
+    url: `https://d2pe372uz1yk5d.cloudfront.net/IMG_2023.JPG`,
   },
   {
-    url: `${CLOUD_URL}/IMG_1462.JPG`,
+    url: `https://d2pe372uz1yk5d.cloudfront.net/IMG_1462.JPG`,
   },
   {
-    url: `${CLOUD_URL}/IMG_1459.JPG`,
+    url: `https://d2pe372uz1yk5d.cloudfront.net/IMG_1459.JPG`,
   },
   {
-    url: `${CLOUD_URL}/IMG_2025.JPG`,
+    url: `https://d2pe372uz1yk5d.cloudfront.net/IMG_2025.JPG`,
   },
 ]
 const RoomsSwiper = ({type}) => {
