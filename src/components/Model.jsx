@@ -18,12 +18,18 @@ const letter = {
 const Model = () => {
   const [ln, setLn] = useContext(LanguageContext)
   let msg; 
-  if(ln === 'rus'){
-    msg = 'Лучшие впечатления от отеля'
-  }else if(ln === 'uz'){
-    msg = 'Best hotel experience'
-  }else if(ln === 'eng'){
-    msg = 'Best hotel experience'
+  switch(ln){
+    case "rus":
+      msg = "Лучшие впечатления от отеля"
+      break; 
+    case "eng":
+      msg = "Best hotel experience"
+      break; 
+    case "uz":
+      msg = "Best hotel experience"
+      break;
+    default:
+      msg = "Best hotel experience"
   }
   return (
     <section>
@@ -56,7 +62,7 @@ const Model = () => {
               zIndex: 0,
             }}
           >
-            Best hotel experience
+            {msg}
           </motion.h1>
           <div className="d-flex justify-content-center">
             <motion.img
